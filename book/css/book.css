@@ -1,0 +1,131 @@
+
+
+body{ 
+	background-color: #EEE9DF;
+	margin-left:30px;
+}
+
+.container {
+	width:  367.742px;
+	height: 600px;
+	background: #FFB500;
+	animation:  fadein 2s forwards;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	overflow: hidden;
+}
+
+.box {
+	width:  367.742px;
+	height: 380px;
+	background: red;
+	position: absolute;
+	z-index: -1;
+	animation:  fadein 3s forwards;
+}
+
+
+@keyframes fadein {
+	0% {opacity: 0;}
+	100% {opacity: 100;}
+}
+
+.bodyimage {
+	position: absolute;
+	animation:  bodymove 2s forwards;
+	animation-delay: 1s;
+	opacity: 0;
+}
+
+
+@keyframes bodymove {
+	0% {top: -8000px; opacity: 100;}
+	100% {top: 0px; opacity: 100;}
+}
+
+.eye {
+	transform: rotate(0deg); 
+	transition: 1s;
+}
+
+.eye:hover {
+	transform: rotate(360deg); 
+	transition: 1s;
+}
+
+.eyeimage{
+	position: absolute;
+	animation:  eyemove 2s forwards;
+	animation-delay: 2s;
+	opacity: 0;
+	top: 58%;
+
+}
+
+@keyframes eyemove {
+	0% {left: -8000px; opacity: 100; transform: rotate(0deg); }
+	60% {left: 130px; opacity: 100; transform: rotate(0deg); }
+	100% {left: 130px; opacity: 100; transform: rotate(360deg); }
+}
+
+.author {
+	font-family: 'Russo One', sans-serif;
+	font-size: 30px;
+	color: #FFB500;
+	position: absolute;
+	left: 30%;
+	top: 4%;
+	transform: translate(-50%,-50%);
+	animation:  author 2s forwards;
+	animation-delay: 3s;
+	opacity: 0;
+}
+
+@keyframes author{
+            
+			0% { opacity: 0; }
+            10%{ opacity: 0;  transform: perspective(700px) translate3d(-135px, -140px, -150px) rotate3d(1, -1, 0, 35deg);}
+            100%{ opacity: 1; transform: perspective(700px) translate3d(0, 0, 0); }
+}
+
+
+.line {
+	position: absolute;
+	background-color: black;
+	height: 3px;
+	left: 23%;
+	top: 15%;
+	animation:  linegrow 2s forwards;
+	animation-delay: 3s;
+	opacity: 0;
+}
+
+@keyframes linegrow{
+	0% { opacity: 0%; width: 0px;}
+	60% { opacity: 0%; 	width: 0px;}
+	100% { opacity: 100%; 	width: 200px; }
+
+}
+
+.bookname {
+
+	font-family: 'Russo One', sans-serif;
+	font-size: 30px;
+	color: #FFB500;
+	position: absolute;
+	top: 22%;
+	transform: translate(-50%,-50%);
+	animation:  bookname 2s forwards;
+	animation-delay: 3s;
+	opacity: 0;
+	text-align: center;
+	width: 500px;
+}
+
+@keyframes bookname{
+            
+	0% {left: -800px; opacity: 0%; }
+	80% {left: -800px; opacity: 50%; }
+	100% {left: 180px; opacity: 100%; } 
